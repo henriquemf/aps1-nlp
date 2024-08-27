@@ -9,7 +9,7 @@ Todas as bibliotecas que forem obrigatórias para a execução do programa se en
 pip install -r requirements.txt
 ```
 
-## Como rodar? 🖥️
+## Como rodar e testar? 🖥️
 Para executar e rodar a API basta abrir o terminal dentro da pasta principal do repositório da APS e rodar o comando abaixo:
 
 ```bash
@@ -34,6 +34,8 @@ A APS consiste em efetuar a criação de um classificador TFIDF para determinar 
 ## Banco de dados 📂:
 O banco de dados para essa APS foi criado com a utilização da API do _Art Institute of Chicago_ e, a sua utilização, foi motivada pela necessidade de encontrar artistas, obras e pinturas que remetem a um determinado estilo/palavra determinada pelo usuário. Logo, se o usuário quiser encontrar as obras de arte referentes ao movimento surrealista, ele poderia realizar essa busca e encontrar as artes que mais condizem com o que deseja ver, podendo obter informações extras sobre aquela obra como o artista que a pintou, o ano em que foi pintada e sua descrição.
 
+Dessa forma, o sistema não apenas facilita a descoberta de obras, mas também promove a apreciação da arte ao oferecer contexto e informações adicionais sobre cada obra.
+
 Para a criação desse banco de dados, foi utilizado o código localizado em `db_creation.py` e, o resultado de sua execução, irá criar um `.csv` com 10 mil itens dessa API localizado em `art-db.csv`.
 
 ## API e configurações de rede 📪:
@@ -47,6 +49,7 @@ Sendo assim, sempre que for executada, irá ser na porta 5006 definida. No entan
 ```bash
 sudo ufw allow 5006
 ```
+
 
 ## Rubrica e pontos realizados 🟢:
 - [X] Criação e configuração da API via Flask ou FastAPI
