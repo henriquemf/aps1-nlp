@@ -23,10 +23,24 @@ http://10.103.0.28:5006
 ```
 
 Acessando algum dos endereços acima, é possível adicionar a extensão `/query?query=[STRING DE BUSCA]` à URL acima, onde `[STRING DE BUSCA]` se refere a uma string qualquer escolhida pelo usuário para classificar os documentos em ordem de relevância de acordo com a sua busca em um total de 10 documentos.
-Exemplo:
+
+### Exemplos de teste:
+
+1 - Query em que retorna exatamente 10 resultados
 ```
-http://10.103.0.28:5006/query?query=painting
+http://10.103.0.28:5006/query?query=surrealism
 ```
+
+2 - Query que retorna de 1 a 9 resultados (nesse caso, são 3)
+```
+http://10.103.0.28:5006/query?query=impressionism
+```
+
+3 - Query que retorna resultados não óbvios. Nesse caso, "cross" retorna resultados não óbvios pois "cross", em inglês, pode significar tanto "cruz" quanto "cruzamento" no português, levando ao classificador retornar artes em que há tanto alguma cruz, sendo alguma pintura com uma temática religiosa, quanto um cruzamento, podendo se encaixar em qualquer outro tema nesse caso.
+```
+http://10.103.0.28:5006/query?query=cross
+```
+
 ---
 # Introdução da APS 💡:
 A APS consiste em efetuar a criação de um classificador TFIDF para determinar a relevância de determinadas palavras em documentos de determinado banco de dados. Sendo assim, é necessário a criação de um banco de dados único que, nessa APS, foi criado com a utilização de uma API externa
